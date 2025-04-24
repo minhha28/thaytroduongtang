@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Full-stack Marketing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .khoahoc {
+      width: 100%;
+      height: 100vh;
+      background-image: url('./fsm1.png'); 
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .khoahoc-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+      max-width: 90%;
+      padding: 0 20px;
+    }
+
+    .khoahoc-text h1 {
+      font-size: 6vw;
+      font-weight: bold;
+      margin: 10px 0;
+      white-space: nowrap;
+    }
+
+    .khoahoc-text h2 {
+      font-size: 4vw;
+      font-weight: 600;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .khoahoc-text p {
+      font-size: 1.5vw;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .cta-wrapper {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .btn {
+      background-color: #0065b8;
+      color: white;
+      border: none;
+      padding: 20px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.5vw;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004b87;
+      transform: translateY(-5px);
+    }
+
+    .section-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      background-color: white;
+      padding: 60px 30px;
+    }
+
+    .info-box, .instructor {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background-color: #002F6C;
+      color: white;
+      padding: 30px;
+      border: 3px dashed #004b87;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .info-box h3, .instructor h3 {
+      background-color: #003E91;
+      color: white;
+      padding: 15px;
+      border-radius: 25px;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .info-box ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .info-box ul li {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .instructor img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+
+    .instructor p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .khoahoc-text h1 { font-size: 10vw; }
+      .khoahoc-text h2 { font-size: 7vw; }
+      .khoahoc-text p { font-size: 3.5vw; }
+      .btn { font-size: 4vw; padding: 15px 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="khoahoc">
+    <div class="khoahoc-text">
+      <h2>Khoá học</h2>
+      <h1>FULL-STACK MARKETING</h1>
+      <p>
+        Khóa học Full-stack Marketing mang đến kiến thức toàn diện về các khía cạnh của marketing, từ chiến lược truyền thống đến kỹ thuật số hiện đại...
+      </p>
+    </div>
+    <div class="cta-wrapper">
+      <button class="btn">Đăng kí ngay để nhận ưu đãi</button>
+    </div>
+  </div>
+
+  <div class="section-info">
+    <div class="info-box">
+      <h3>NỘI DUNG KHÓA HỌC</h3>
+      <ul>
+        <li><b>Performance Marketing, Data Analytics, Automation</b></li>
+        <li><b>Thực hành chiến dịch quảng cáo thực tế</b></li>
+      </ul>
+    </div>
+
+    <div class="instructor">
+      <h3>GIẢNG VIÊN CHÍNH: Thầy Trần Văn B</h3>
+      <img src="./giangviennam.png" alt="Giảng viên">
+      <p><b>Giải thưởng Digital Marketing Excellence 2019</b></p>
+      <p><b>Đào tạo hơn 2000 học viên</b></p>
+    </div>
+
+    <div class="info-box">
+      <h3>LỊCH HỌC</h3>
+      <ul>
+        <li><b>4 buổi/tuần (Thứ 2-3-5-7)</b></li>
+        <li><b>Khai giảng: 30/1/2025</b></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

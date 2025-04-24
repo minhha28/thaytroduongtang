@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: white;
+      color: #000;
+    }
+
+    .khoahoc {
+  width: 100%;
+  min-height: 92vh;
+  background-image: url('./mkf1.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center; /* Ưu tiên hiển thị phần bên trái */
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+  .khoahoc-text {
+    position: relative;
+    color: white;
+    z-index: 2;
+    max-width: 1000px;
+    margin-left: 350px;
+    padding: 150px 110px 110px;
+    text-align: center;
+  }
+
+  .khoahoc-text h2 {
+    font-size: 50px;
+    font-weight: 600;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .khoahoc-text h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .khoahoc-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #f8f8f8;
+  }
+
+  .course-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+    background-color: white;
+    gap: 0px;
+  }
+
+  .detail-card, .instructor-card {
+    background-color: #002f6c;
+    color: white;
+    border-radius: 20px;
+    border: 2px dashed #003b95;
+    padding: 40px 30px 0px;
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .detail-card h3, .instructor-card h3 {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1746a2;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .detail-card ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    
+  }
+
+  @media (max-width: 768px) {
+    .khoahoc-text h1 {
+      font-size: 36px;
+    }
+    .khoahoc-text h2 {
+      font-size: 28px;
+    }
+    .khoahoc-text p {
+      font-size: 16px;
+    }
+    .btn {
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+  }
+  .info-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background-color: #ffffff;
+  gap: 40px;
+}
+
+.info-left, .info-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.instructor-card {
+  display: flex;
+  align-items: center;
+  background-color: #002f6c;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.instructor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #1746a2;
+}
+
+.instructor-content h3 {
+  background-color: #cfe8ff;
+  color: #003b95;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.schedule-box {
+  background-color: #002f6c;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+  max-height: 130px;
+}
+
+.schedule-box h4 {
+  background-color: #cfe8ff;
+  color: #003b95;
+  padding: 8px 8px;
+  border-radius: 20px;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 250px;
+  margin-top: 10px;
+
+}
+
+.schedule-box p{
+  font-size: 18px;
+  padding-right: 40px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.info-right .content-box {
+  background-color: #002f6c;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.content-box h4 {
+  background-color: #cfe8ff;
+  color: #003b95;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 250px;
+}
+
+.content-box p {
+  font-size: 18px;
+  padding-left: 10px;
+  margin-top: 20px;
+  text-align: center;
+  line-height:0;
+}
+.cta-container {
+  display: flex;
+  margin-left: 170px; /* Đẩy CTA sang bên phải */
+  margin-top: 20px;           /* Gần hơn với box nội dung */
+  padding-right: 20px;        /* Cách mép phải 1 chút */
+}
+
+.cta-button-true {
+  background: linear-gradient(to right, #0072c6, #004b87);
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 14px 36px;
+  border-radius: 40px;
+  border: 3px solid black;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button-true:hover {
+  transform: translateY(-2px);
+}
+
+
+
+    .chuongtrinh {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      /* Ảnh nền */
+      background-image: url('./nền\ cth1.png'); 
+      background-size: cover; 
+      background-repeat: no-repeat;
+      background-position: center -72px; /* Đẩy ảnh xuống một chút để dải magic nằm đúng */
+    }
+
+    .container1 {
+      width: 90%;
+      max-width: 1400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 36px;
+      align-items: start;
+      justify-items: center;
+      position: relative;
+    }
+
+    .title-box1 {
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 3px solid black;
+      padding: 10px 30px;
+      border-radius: 20px;
+      background: white;
+      font-size: 27px;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    .box1 {
+      width: 100%;
+      background: #dff1ff;
+      border: 3px solid black; /* Viền nét đứt */
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    .box-title1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .box:nth-child(5),
+    .box:nth-child(6),
+    .box:nth-child(7) {
+      margin-top: 40px; /* Tuỳ chỉnh theo mắt nhìn cho đẹp */
+     }
+    
+        .container {
+        max-width: 1200px;
+        margin: auto;
+        }
+
+        .pricing-wrapper {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+        .background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./Bản sao của Thầy trò đường tăng + Con cún.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        z-index: 0;
+        }
+
+        .pricing-content {
+        position: relative;
+        z-index: 1;
+        padding: 40px 20px;
+        }
+
+        .pricing-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #1c3b74;
+        }
+
+        .pricing-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+        }
+
+        .price-box {
+        background: #cedfff;
+        color: rgb(0, 0, 0);
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+
+        .price-box h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        }
+
+        .price-box p {
+        font-size: 24px;
+        font-weight: bold;
+        }
+
+        .cta-button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 12px 24px;
+        background-color: #00387d;
+        color: #d6e4ff;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+        background-color: #214ca8;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+    .cta-miniquiz {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+      background-color: #064e9b;
+      padding: 10px;
+      color: white;
+    }
+
+    .cta-miniquiz a {
+      color: #b0d6ff;
+      text-decoration: underline;
+    }
+
+    .form-section, .note-section {
+      background: linear-gradient(to top, #a7e6f3, #226ecc, #232a4a);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      color:aliceblue;
+
+    }
+
+    form {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .notes {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .note-box {
+      background: #e6eefe;
+      color: #000;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .note-box h4 {
+        margin-bottom: 10px;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .pricing {
+        flex-direction: column;
+        align-items: center;
+      }
+      .note-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    padding: 30px;
+    }
+
+    /* Modal content */
+    .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    position: relative;
+    padding: 10px;
+    }
+
+    /* Close button */
+    .close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    }
+
+    .close-btn:hover {
+    color: #000;
+    }
+  </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="khoahoc">
+      <div class="khoahoc-text">
+        <h2>Khoá học</h2>
+        <h1>MARKETING FOUNDATION</h1>
+        <p>
+          Khóa học Full-stack Marketing mang đến kiến thức toàn diện về các khía cạnh của marketing, từ chiến lược truyền thống đến kỹ thuật số hiện đại. Học viên sẽ được trang bị kỹ năng phân tích dữ liệu, xây dựng chiến lược thương hiệu, và vận hành các chiến dịch trên nhiều nền tảng, giúp tối ưu hóa hiệu quả marketing trong mọi lĩnh vực kinh doanh.
+        </p>
+      </div>
+    </div>
+    <div class="info-section">
+        <div class="info-left">
+          <div class="instructor-card">
+            <img src="./Ảnh màn hình 2025-04-24 lúc 00.49.53.png" alt="Giảng viên" />
+            <div class="instructor-content">
+              <h3>GIẢNG VIÊN CHÍNH: Cô Nguyễn Thị A</h3>
+              <p>12 năm kinh nghiệm trong ngành Marketing<br />
+              Trưởng phòng Marketing tại công ty Con lợn con</p>
+            </div>
+          </div>
+      
+          <div class="schedule-box">
+            <h4>LỊCH HỌC</h4>
+              <p>Lịch học: 3 buổi/tuần (Thứ 2-4-6 hoặc Thứ 3-5-7).</p>
+              <P>Ngày khai giảng: 30/1/2025</P>
+          </div>
+        </div>
+      
+        <div class="info-right">
+          <div class="content-box">
+            <h4>NỘI DUNG</h4>
+              <p>Giới thiệu nền tảng về SEO, Content Marketing, Email Marketing.</p><br>
+              <p>10 dự án thực hành nhóm giúp áp dụng kiến thức ngay lập tức.</p>
+          </div>
+          <div class="cta-container">
+            <a href="#" class="cta-button-true">Đăng kí ngay để nhận ưu đãi</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="chuongtrinh">
+      <div class="container1">
+        <div class="title-box1">CHƯƠNG TRÌNH HỌC</div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 1: Hiểu về Digital Marketing</div>
+          <ul>
+            <li>Tổng quan Digital Marketing và vai trò trong kinh doanh.</li>
+            <li>Xây dựng chân dung khách hàng (Customer Persona).</li>
+            <li>Giới thiệu SEO và Content Marketing.</li>
+          </ul>
+        </div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 2: Kỹ năng cơ bản</div>
+          <ul>
+            <li>SEO: Tối ưu hóa từ khóa và kỹ thuật cơ bản.</li>
+            <li>Content Marketing: Lập kế hoạch và viết bài thu hút.</li>
+            <li>Công cụ: Google Keyword Planner, Canva.</li>
+          </ul>
+        </div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 3: Truyền thông mạng xã hội</div>
+          <ul>
+            <li>Xây dựng kế hoạch và quản lý Facebook, Instagram.</li>
+            <li>Công cụ hỗ trợ: Meta Business Suite.</li>
+          </ul>
+        </div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 4: Email Marketing & Quảng cáo cơ bản</div>
+          <ul>
+            <li>Tạo chiến dịch Email Marketing hiệu quả.</li>
+            <li>Giới thiệu Google Ads và Facebook Ads cơ bản.</li>
+          </ul>
+        </div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 5: Thực hành thực tế</div>
+          <ul>
+            <li>Xây dựng chiến dịch Digital Marketing toàn diện cho một sản phẩm giả định.</li>
+            <li>Đánh giá và tối ưu chiến dịch.</li>
+          </ul>
+        </div>
+    
+        <div class="box1">
+          <div class="box-title1">Tháng 6: Đánh giá và định hướng</div>
+          <ul>
+            <li>Báo cáo và trình bày dự án.</li>
+            <li>Định hướng nghề nghiệp và chuẩn bị CV.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="pricing-wrapper">
+          <div class="background-overlay"></div>
+          <div class="pricing-content">
+            <h1 class="pricing-title">HỌC PHÍ MARKETING FOUNDATION</h1>
+            <div class="pricing-row">
+              <div class="price-box">
+                <h3>CHƯA ƯU ĐÃI</h3>
+                <p>12.000.000</p>
+              </div>
+              <div class="price-box">
+                <h3>COMBO</h3>
+                <p>9.600.000</p>
+              </div>
+              <div class="price-box">
+                <h3>EARLY-BIRD</h3>
+                <p>10.800.000</p>
+              </div>
+            </div>
+            <button class="cta-button" href="#form">Đăng kí ngay để nhận ưu đãi</button>
+          </div>
+        </div>
+      </div>
+
+    <div class="cta-miniquiz">Bạn chưa biết về trình độ của bản thân - Thử ngay <button id="openQuiz" style="font-weight: bold; font-size: 18px; background-color: #daf2ff; padding: 5px; border-radius: 10px;">Miniquiz</button> sau</div>
+
+    <div class="form-section" id="form">
+      <form>
+        <h3 style="text-align: center;">Form đăng kí nhận tư vấn khóa học</h3>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Số điện thoại" required>
+        <input type="text" placeholder="Năm sinh">
+
+        <label>Khóa học bạn quan tâm:</label>
+        <select>
+          <option>Marketing Foundation</option>
+          <option>Full-stack Marketing</option>
+          <option>Cả hai khóa</option>
+        </select>
+
+        <textarea placeholder="Bạn mong muốn điều gì sau khóa học?"></textarea>
+
+        <label>Bạn muốn nhận tư vấn về khóa học qua đâu?</label>
+        <select>
+          <option>Số điện thoại</option>
+          <option>Email</option>
+        </select>
+
+        <input type="text" placeholder="Thời gian bạn có thể nhận tư vấn">
+
+        <button class="cta-button" type="submit" style="display: inline-block; margin-top: 1rem; padding: 12px 24px; background-color: #a3cfff; color: #1c3b74; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">Gửi đơn đăng kí</button>
+      </form>
+
+      <div class="notes">
+        <h3 style="text-align: center;">Lưu ý</h3>
+        <div class="note-box">
+            <h4>Lịch khai giảng</h4>
+          <div class="note-grid">
+            <div>
+              <strong style="color: #3e6a99;">Marketing Foundation</strong><br>
+              Lịch học: 3 buổi/tuần<br>
+              Khai giảng: 30/1/2025<br>
+              Hình thức: Offline
+            </div>
+            <div>
+              <strong style="color: #3e6a99;">Full-stack Foundation</strong><br>
+              Lịch học: 4 buổi/tuần<br>
+              Khai giảng: 30/1/2025<br>
+              Hình thức: Offline
+            </div>
+          </div>
+        </div>
+        <div class="note-box">
+          <h4>Đăng kí tư vấn</h4>
+          <p>Trong vòng 01 ngày làm việc, Team sẽ liên hệ hỗ trợ bạn.</p>
+        </div>
+        <div class="note-box">
+          <h4>Cam kết bảo mật thông tin</h4>
+          <p>Thông tin chỉ dùng trong nội bộ Marvic, không chia sẻ bên thứ ba.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Miniquiz: Bạn hiểu gì về Marketing?</h2>
+      <p><strong>Câu 1:</strong> Marketing 4P gồm những gì?</p>
+      <form>
+        <label><input type="radio" name="q1"> Product, Price, Promotion, Place</label><br>
+        <label><input type="radio" name="q1"> Plan, People, Position, Profit</label><br>
+        <label><input type="radio" name="q1"> Price, Packaging, Process, Partnership</label><br>
+        <button type="button" onclick="alert('Cảm ơn bạn đã trả lời!')">Gửi câu trả lời</button>
+      </form>
+    </div>
+  </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openBtn = document.getElementById("openQuiz");
+      const modal = document.getElementById("quizModal");
+      const closeBtn = document.querySelector(".close-btn");
+  
+      // Mở popup khi bấm nút
+      openBtn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+  
+      // Đóng popup khi bấm dấu X
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+  
+      // Đóng popup khi bấm ra ngoài khung
+      window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

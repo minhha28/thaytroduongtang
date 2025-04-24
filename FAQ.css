@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #fff;
+    color: #111;
+  }
+  
+  .faq-header {
+    background: url('./Background\ FAQs.png') no-repeat center;
+    background-size: cover;
+    padding: 60px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .faq-header h1 {
+    font-size: 64px;
+    font-weight: 900;
+  }
+  
+  .faq-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .faq-tabs .tab {
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #004aad;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .faq-tabs .tab:hover,
+  .faq-tabs .tab.active {
+    background-color: #333;
+  }
+  
+  .faq-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .faq-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .faq-item {
+    border-top: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .faq-question {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 0 20px 20px 20px;
+    color: #222;
+    font-size: 16px;
+  }
+  
+  .toggle-icon {
+    font-size: 24px;
+  }
+  

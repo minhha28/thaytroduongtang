@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ - Margic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      padding: 90px 0;
+      background: url('./nền\ form\ lh.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1100px;
+      width: 100%;
+      padding: 0 20px;
+      gap: 50px;
+    }
+
+    .contact-info,form {
+      flex: 1;
+    }
+    
+
+    .contact-info h3 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .contact-info h2 {
+      color: #0d47a1;
+      font-size: 34px;
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+
+    .contact-info p {
+      margin: 15px 0;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .contact-info a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+
+    form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 16px;
+    }
+
+    .form-row > div {
+      flex: 1;
+    }
+
+    .captcha-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+
+    .submit-btn {
+      background-color: #190a57;
+      color: white;
+      padding: 12px 32px;
+      border: none;
+      border-radius: 24px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .map-section {
+      background: url('./nền map.png') no-repeat center center;
+      background-size: cover;
+      padding: 50px 10px;
+      text-align: center;
+    }
+
+    .map-section h3 {
+      color: #0d47a1;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .map-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 0;
+      max-width: 980px;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="header"></div>
+
+  <!-- Phần Liên hệ -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <!-- Thông tin -->
+      <div class="contact-info">
+        <h3>Bạn muốn kết nối với Margic?</h3>
+        <h2>ĐỂ LẠI LỜI NHẮN NHÉ!</h2>
+        <p><i>Bạn có câu hỏi, đề xuất, hoặc mong muốn hợp tác cùng Margic?</i><br>
+          Điền vào form và đội ngũ chúng mình sẽ phản hồi bạn trong vòng 24h!
+        </p>
+        <p>
+          📧 <a href="mailto:cskh@margic.com">cskh@margic.com</a><br>
+          📞 84 870 462 199<br>
+          📱 @margic.marketing<br>
+          📘 Margic - Marketing cùng Gen Z<br>
+          📍 Số 90 Giải Phóng, Đồng Tâm, Hai Bà Trưng, Hà Nội
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form>
+        <label>Họ tên *</label>
+        <input type="text" required>
+
+        <div class="form-row">
+          <div>
+            <label>Số điện thoại *</label>
+            <input type="tel" required>
+          </div>
+          <div>
+            <label>Email *</label>
+            <input type="email" required>
+          </div>
+        </div>
+
+        <label>Lời nhắn *</label>
+        <textarea required></textarea>
+
+        <button class="submit-btn" type="submit">GỬI</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Phần Bản đồ -->
+  <section class="map-section" id="map">
+    <h3>VỊ TRÍ VĂN PHÒNG </h3>
+    <p>Bạn có thể đến trực tiếp để trò chuyện cùng Margic</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.437134996402!2d105.84101177499483!3d21.01344778832365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ace421617f75%3A0x32a6dce246d7a3a6!2zOTAgR2nDoWkgUGjhu5FuZywgxJDhu5NuZyBUw6JtLCBIYWkgQsOgIFRydW5nLCBIw6AgTuG7mWkgMTAwMDAw!5e0!3m2!1svi!2s!4v1713336473780!5m2!1svi!2s"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>  
+</body>
+</html>

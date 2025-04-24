@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* Footer */
+    .footer {
+      background-color: #dff2ff;
+      padding: 40px;
+      color: #1a1a4a;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-left {
+      display: flex;
+      gap: 20px;
+      max-width: 600px;
+    }
+
+    .footer-left .logo {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .footer-left h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+    }
+
+    .footer-left ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .footer-left a {
+      color: #1a1a4a;
+      text-decoration: none;
+    }
+
+    .footer-left a:hover {
+      text-decoration: underline;
+      color: #007BFF;
+    }
+
+    .footer-right h3 {
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      background-size: cover;
+      border-radius: 50%;
+      transition: transform 0.2s, box-shadow 0.3s;
+      border: #c3d3f0 solid;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon.facebook {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/145/145802.png');
+    }
+
+    .icon.instagram {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+    }
+
+    .icon.zalo {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png');
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- Footer -->
+  <footer>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="./magic-wand-and-hat-svgrepo-com.svg" alt="Margic Logo" class="logo" />
+          <div>
+            <h2>Margic - Marketing Academy</h2>
+            <ul>
+              <li>📍 Địa chỉ: Số 90 Giải Phóng, Đồng Tâm, Hai Bà Trưng, Hà Nội, Việt Nam</li>
+              <li>📞 Hotline: <a href="tel:+84870462199">+84 870 462 199</a></li>
+              <li>📧 Email: <a href="mailto:cskh@margic.com">cskh@margic.com</a></li>
+              <li>🌐 Website: <a href="https://www.margic.com/" target="_blank">https://www.margic.com/</a></li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="footer-right">
+          <h3>Follow us on</h3>
+          <div class="social-icons">
+            <a href="#" class="icon facebook" title="Facebook"></a>
+            <a href="#" class="icon instagram" title="Instagram"></a>
+            <a href="#" class="icon zalo" title="Zalo"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </footer>
+</body>
+</html>
+</body>
+</html>

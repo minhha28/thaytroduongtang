@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Margic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f5faff;
+        }
+
+        .main {
+            display: flex;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .left {
+            width: 75%;
+            padding-right: 20px;
+        }
+
+        .right {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .highlight {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .highlight img {
+            width: 100%;
+            display: block;
+        }
+
+        .highlight .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.1));
+            transition: color 0.3s ease;
+        }
+
+        .highlight:hover .slide-title {
+            color: #daf1ff;
+        }
+
+        .search-section input {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .tag-section a {
+            display: inline-block;
+            background-color: #e0f7fa;
+            color: #004080;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .tag-section a:hover {
+            background-color: #b2ebf2;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .basic-marketing {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background-color: #daf1ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0));
+            color: white;
+            font-size: 14px;
+        }
+
+        .view-all {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px;
+            margin: 2px solid;
+            background-color: #0f2767;
+            color: aliceblue;
+            font-style: italic;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .view-all a {
+            color: #b4d1ed;
+            text-decoration: underline;
+        }
+
+        .view-all:hover{
+            color: #b2ebf2;
+        }
+
+        .top-posts {
+            background-color: #0f2767;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .author {
+            font-style: italic;
+            color: #b2ebf2;
+        }
+        .title{
+            font-weight: bold;
+        }
+
+        .top-posts h2 {
+            margin-bottom: 10px;
+            color: #e7f4ff;
+        }
+
+        .post {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post .rank {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e7f4ff;
+        }
+
+        .post .content {
+            font-size: 14px;
+            color: #e7f4ff;
+        }
+
+        .top-authors {
+            background-color: #daf1ff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .name {
+            font-weight: bold;
+        }
+
+        .top-authors h2 {
+            margin-bottom: 10px;
+        }
+
+        .author-card {
+            background-color: #0f2767;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="main">
+        <div class="left">
+            <h1 style="padding: 5px;">| Bài viết nổi bật</h1>
+
+            <div class="highlight">
+                <img id="slideImg" src="" alt="Slide" />
+                <div class="info">
+                    <h2 class="slide-title"></h2>
+                    <span class="slide-meta"></span>
+                    <p class="slide-desc"></p>
+                </div>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Tìm kiếm bài viết">
+            </div>
+            <div class="tag-section">
+                <a href="#marketing-cb">Marketing căn bản</a>
+                <a href="#digital">Digital Marketing</a>
+                <a href="#content">Content</a>
+                <a href="#performance">Performance</a>
+                <a href="#casestudy">Case Study</a>
+                <a href="#about">Về chúng tôi</a>
+                <a href="#career">Hướng nghiệp</a>
+            </div>
+
+            <!-- Các mục bài viết theo section có overlay, nền xanh nhạt, tiêu đề trắng -->
+            <div id="marketing-cb">
+                <div class="section-title">Marketing căn bản</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Mkt.jpg" alt="">
+                        <p><strong>Marketing khác quảng cáo chỗ nào?</strong><br>Nguyễn Minh Đức - 02/04/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./mkt(2).jpg" alt="">
+                        <p><strong>4 bước xây dựng chân dung khách hàng cơ bản</strong><br>Hà Thu - 02/04/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="./sample.html">Xem tất cả</a></div>
+            </div>
+            <div id="digital">
+                <div class="section-title">Digital Marketing</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Digital Marketing.jpg" alt="">
+                        <p><strong>Digital Full-stack là gì? Lộ trình học marketing hiện đại từ A đến Z</strong><br>Nguyễn Hoàng Hải - 18/03/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Digital Marketing (2).jpg" alt="">
+                        <p><strong>Toolkit của một Digital Full-stack Marketer gồm những gì?</strong><br>Trần Vân Anh - 29/03/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+        
+            <div id="content">
+                <div class="section-title">Content</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Content.jpg" alt="">
+                        <p><strong>Content tốt là content thật – Vì sao Gen Z chuộng nội dung thô, không màu mè?</strong><br>Phạm Văn Tùng - 25/03/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Content (2).jpg" alt="">
+                        <p><strong>Viết content thế nào để khách đọc là muốn mua?</strong><br>Nguyễn Hà An - 06/04/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+            <div id="performance">
+                <div class="section-title">Performance</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Perfomance.jpg" alt="">
+                        <p><strong>Performance Marketing là gì? Toàn cảnh nghề “chạy số” trong thời đại số</strong><br>Team học viên khóa Foundation 03 - 22/03/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Perfomance (2).jpg" alt="">
+                        <p><strong>Hiểu các chỉ số Performance: CPM, CPA, CTR,... không còn là nỗi sợ</strong><br>Minh Châu - 28/03/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+            <div id="casestudy">
+                <div class="section-title">Case study</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Case study.jpg" alt="">
+                        <p><strong>Làm viral content 0 đồng – Case study trà đá và bài học định vị đúng</strong><br>Trần Quốc Khánh - 11/03/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Case study (2).jpg" alt="">
+                        <p><strong>Tăng 300% traffic nhờ SEO: Học viên Full-stack kể lại hành trình tối ưu website</strong><br>Nguyễn Minh Phương - 26/03/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+            <div id="about">
+                <div class="section-title">Về chúng tôi</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Về chúng tôi.jpg" alt="">
+                        <p><strong>Vì sao Margic chọn dạy nền tảng trước khi chạy quảng cáo?</strong><br>Trịnh Ngọc Ánh - 19/03/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Về chúng tôi (2).jpg" alt="">
+                        <p><strong>Hành trình Margic: Từ một lớp học nhỏ đến học viện đào tạo thực chiến</strong><br>Nguyễn Đức Minh - 30/03/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+            <div id="career">
+                <div class="section-title">Hướng nghiệp</div>
+                <div class="basic-marketing">
+                    <div class="card">
+                        <img src="./Hướng nghiệp.jpg" alt="">
+                        <p><strong>Học Digital Marketing để làm gì? 5 lựa chọn nghề nghiệp bạn có thể theo đuổi</strong><br>Nguyễn Minh Đức - 02/04/2025</p>
+                    </div>
+                    <div class="card">
+                        <img src="./Hướng nghiệp (2).jpg" alt="">
+                        <p><strong>Marketing có dành cho người hướng nội không?</strong><br>Hà Thu - 02/04/2025</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">Xem tất cả</a></div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="top-posts">
+                <h2>🔥 Top bài viết tháng 4</h2>
+                <hr style="color: #e7f4ff;">
+                <br>
+                <div class="post">
+                    <span class="rank">#01</span>
+                    <div class="content">
+                        <p class="title">Gen Z và hành vi tiêu dùng mới</p>
+                        <p class="author">Tác giả: Nguyễn Thanh Phong</p>
+                        <p class="stats">12.4K lượt đọc, 780 chia sẻ</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <span class="rank">#02</span>
+                    <div class="content">
+                        <p class="title">Vì sao clip điện thoại lại viral hơn?</p>
+                        <p class="author">Tác giả: Trần Thảo Vy</p>
+                        <p class="stats">9.1K lượt đọc, 430 chia sẻ</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <span class="rank">#03</span>
+                    <div class="content">
+                        <p class="title">Vì sao clip điện thoại lại viral hơn?</p>
+                        <p class="author">Tác giả: Trần Thảo Vy</p>
+                        <p class="stats">9.1K lượt đọc, 430 chia sẻ</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <span class="rank">#04</span>
+                    <div class="content">
+                        <p class="title">Vì sao clip điện thoại lại viral hơn?</p>
+                        <p class="author">Tác giả: Trần Thảo Vy</p>
+                        <p class="stats">9.1K lượt đọc, 430 chia sẻ</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <span class="rank">#05</span>
+                    <div class="content">
+                        <p class="title">Vì sao clip điện thoại lại viral hơn?</p>
+                        <p class="author">Tác giả: Trần Thảo Vy</p>
+                        <p class="stats">9.1K lượt đọc, 430 chia sẻ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-authors">
+                <h2>🏅 Top tác giả tháng 4</h2>
+                <div class="author-card">
+                    <p class="name">01. Nguyễn Thanh Phong</p>
+                    <p class="role">Marketing Foundation, tư duy nền tảng</p>
+                </div>
+                <div class="author-card">
+                    <p class="name">02. Trần Thảo Vy</p>
+                    <p class="role">Content Marketing, viral, Gen Z</p>
+                </div>
+                <div class="author-card">
+                    <p class="name">03. Dương Ngọc Minh</p>
+                    <p class="role">Performance, Tracking, AdTech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const slideData = [
+            {
+                img: "Thầy trò đường tăng + Con cún (8).png",
+                title: "Content review lật mặt – review thật hay dắt mũi người xem?",
+                author: "Nguyễn Mai Hương",
+                date: "05/04/2025",
+                desc: "Từ những video 'vạch trần sản phẩm' đang viral trên TikTok..."
+            },
+            {
+                img: "Digital Marketing (2).jpg",
+                title: "Học Digital Marketing để làm gì? 5 lựa chọn nghề nghiệp bạn có thể theo đuổi",
+                author: "Team học viên khóa Foundation 03",
+                date: "22/03/2025",
+                desc: "Từ viết content, chạy ads, SEO đến làm chiến lược – ngành marketing không hề ..."
+            },
+            {
+                img: "Content.jpg",
+                title: " Làm viral content 0 đồng – Case study trà đá và bài học định vị đúng",
+                author: "Minh Châu",
+                date: "28/03/2025",
+                desc: "Câu chuyện học viên Margic tạo ra một chiến dịch nội dung ..."
+            },
+            {
+                img: "Digital Marketing.jpg",
+                title: "Hiểu các chỉ số Performance: CPM, CPA, CTR,... không còn là nỗi sợ",
+                author: "Nguyễn Hà An",
+                date: "06/04/2025",
+                desc: "Giải thích đơn giản – dễ hiểu – dễ nhớ cho tất cả thuật ngữ thường gặp khi chạy quảng cáo và tối ưu hiệu quả."
+            },
+            {
+                img: "Content (2).jpg",
+                title: "Viết content thế nào để khách đọc là muốn mua?",
+                author: " Nguyễn Quang Long",
+                date: "08/04/2025",
+                desc: "Ứng dụng mô hình AIDA và tâm lý học tiêu dùng vào nội dung để tăng chuyển đổi ..."
+            },
+               
+        ];
+        let current = 0;
+        const img = document.getElementById("slideImg");
+        const infoBox = document.querySelector(".info");
+        function showSlide(index) {
+            const data = slideData[index];
+            img.src = data.img;
+            infoBox.querySelector(".slide-title").textContent = data.title;
+            infoBox.querySelector(".slide-meta").textContent = `Tác giả: ${data.author} | Ngày đăng: ${data.date}`;
+            infoBox.querySelector(".slide-desc").textContent = data.desc;
+        }
+        showSlide(current);
+        setInterval(() => {
+            current = (current + 1) % slideData.length;
+            showSlide(current);
+        }, 5000);
+    </script>
+    <div id="footer"></div>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

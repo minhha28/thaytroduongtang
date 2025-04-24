@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Full-stack Marketing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .khoahoc {
+  width: 2900px;
+  height: 100vh; /* Sử dụng chiều cao của viewport */
+  background-image: url('./fsm1.png'); 
+  background-size: cover; /* Lấp đầy không gian mà không làm méo ảnh */
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.khoahoc-text {
+  position: absolute;
+  top: 25%;
+  left: 52%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.khoahoc-text h1 {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 10px 0;
+  width: 1000px;
+  white-space: nowrap;
+}
+
+.khoahoc-text h2 {
+  font-size: 100px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 0;
+  left: 100%;
+  padding-left: 300px;
+}
+
+.khoahoc-text p {
+  font-size: 50px;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding-right: 200px; /* Hoặc 40px, tuỳ mắt bạn thấy ổn */
+  text-align: center;
+  width: 2000px;
+  margin-left: -180px;
+}
+
+    .cta-wrapper {
+  position: absolute;
+  bottom: 20px; /* thử tăng thành 80px chẳng hạn */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+    .btn {
+      background-color: #0065b8;
+      color: white;
+      border: none;
+      padding: 40px 50px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 40px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004b87;
+      transform: translateY(-5px);
+    }
+    .section-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 80px 50px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    color: #000;
+  }
+
+  .info-box {
+    flex: 1;
+    margin: 0 30px;
+    padding: 30px;
+    border: 3px dashed #004b87;
+    border-radius: 20px;
+    background-color: #002F6C;
+    color: white;
+  }
+
+  .info-box h3 {
+    background-color: #003E91;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 32px;
+    margin-top: -60px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+  }
+
+  .info-box ul {
+    list-style-type: disc;
+    padding-left: 30px;
+  }
+
+  .info-box ul li {
+    margin-bottom: 20px;
+  }
+
+  .instructor {
+    text-align: center;
+    margin: 0 30px;
+  }
+
+  .instructor h3 {
+    background-color: #003E91;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 32px;
+    width: fit-content;
+    margin: 0 auto -30px;
+    font-weight: bold;
+  }
+
+  .instructor img {
+    width: 220px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .instructor p {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="khoahoc">
+    <div class="khoahoc-text">
+      <h2>Khoá học</h2>
+      <h1>FULL-STACK MARKETING</h1>
+      <p>
+        Khóa học Full-stack Marketing mang đến kiến thức toàn diện về các khía cạnh của marketing, từ chiến lược truyền thống đến kỹ thuật số hiện đại. Học viên sẽ được trang bị kỹ năng phân tích dữ liệu, xây dựng chiến lược thương hiệu, và vận hành các chiến dịch trên nhiều nền tảng, giúp tối ưu hóa hiệu quả marketing trong mọi lĩnh vực kinh doanh.
+      </p>
+    </div>
+    </div>
+    <div class="cta-wrapper">
+      <button class="btn">Đăng kí ngay để nhận ưu đãi</button>
+    </div>
+
+    <div class="section-info">
+      <div class="info-box">
+        <h3>NỘI DUNG KHÓA HỌC</h3>
+        <ul>
+          <li><b>Kết hợp kiến thức nền tảng và chuyên sâu như Performance Marketing, Data Analytics, Automation</b></li>
+          <li><b>Thực hành chiến dịch quảng cáo với ngân sách thực tế</b></li>
+        </ul>
+      </div>
+    
+      <div class="instructor">
+        <h3>GIẢNG VIÊN CHÍNH: Thầy Trần Văn B</h3>
+        <img src="./giangviennam.png" alt="Giảng viên">
+        <p><b>Đạt giải thưởng Digital Marketing Excellence năm 2019</b></p>
+        <p><b>Chuyên gia đào tạo hơn 2000 học viên</b></p>
+      </div>
+    
+      <div class="info-box">
+        <h3>LỊCH HỌC</h3>
+        <ul>
+          <li><b>Lịch học: 4 buổi/tuần (Thứ 2-3-5-7)</b></li>
+          <li><b>Ngày khai giảng: 30/1/2025</b></li>
+        </ul>
+      </div>
+    </div>
+</body>
+</html>

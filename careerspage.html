@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tuyển dụng Margic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      background-color: #e6f0f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: linear-gradient(to bottom, #1f2e55, #6bc6ec);
+      padding: 50px 20px;
+      text-align: center;
+      color: white;
+      border-bottom: 4px solid #e0e0e0;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .btn {
+      font-size: 18px;
+      padding: 7px 18px;
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #555;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 25px;
+      background: #ffffff;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .container, .process-container, .apply-container {
+  background: #E5F3FF;
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+    .title, .process-title, .apply-title {
+      text-align: center;
+      color: #003366;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      line-height: 1.4;
+    }
+
+    .position {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .icon-container {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .hexagon {
+      width: 100%;
+      height: 100%;
+      background-color: #0077C8;
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-container img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .position-text {
+      color: #003366;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .position-text strong {
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .learn-more, .learn-more-process {
+      text-align: left;
+      margin-top: auto;
+      color: #003366;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .learn-more::after, .learn-more-process::after {
+      content: '→';
+      margin-left: 8px;
+      font-size: 15px;
+    }
+
+    .process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px; 
+  }
+
+  .step {
+    background: white;
+    border-radius: 4px;
+    padding: 8px; 
+    text-align: left;
+    font-size: 11.5px; 
+    color: #003366;
+    min-height: 80px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid white;
+  }
+
+  .step:nth-child(2), .step:nth-child(3) {
+    background: #0077C8;
+    color: white;
+  }
+
+  .step-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 12.5px; 
+  }
+
+  .step-title::before {
+    content: '✔️';
+    margin-right: 5px;
+    font-size: 13px;
+  }
+
+  .step-description {
+    line-height: 1.4;
+    font-size: 11px;
+  }
+
+    .policy-container ul {
+      padding-left: 18px;
+      color: #003366;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .apply-box {
+      background: white;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      color: #003366;
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .apply-box b {
+      color: #003366;
+    }
+
+    .apply-box a {
+      color: #003366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .apply-box img {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .learn-more,
+    .learn-more-process {
+      margin-top: auto;
+      text-decoration: none;
+    }
+
+    /* PHẦN CHI TIẾT */
+    #details {
+  padding: 60px 60px; 
+  background-color: #E5F3FF;
+  color: #003366;
+  line-height: 1.8; 
+  font-size: 15px;  
+}
+ 
+#details h2 {
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; 
+}
+
+#details h3, #details h4, #details h5, #details h6, #details h7 {
+  font-weight: bold;
+  color: #003366;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+#details h3 {
+  font-size: 22px;
+}
+
+#details h4 {
+  font-size: 18px;
+  font-style: italic;
+}
+
+#details h5, #details h6, #details h7 {
+  font-size: 17px;
+}
+
+#details ul {
+  padding-left: 24px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+#details p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.details-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#details img {
+  width: 100%;
+  max-width: 260px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="hero">
+    <h1>GIA NHẬP ĐỘI NGŨ SÁNG TẠO CỦA MARGIC</h1>
+    <p>Chúng tôi luôn tìm kiếm những nhân sự nhiệt huyết, yêu thích lĩnh vực
+      marketing và mong muốn tạo ra những tác động tích cực thông qua giáo dục và cộng đồng.
+    </p>
+    <a href="#details" class="btn">Tìm hiểu thêm</a>
+  </section>
+
+  <div class="main-container">
+
+    <!-- Vị trí tuyển dụng -->
+    <div class="container">
+      <div class="title">Vị trí đang<br>tuyển dụng</div>
+      <div class="position">
+        <div class="icon-container">
+          <div class="hexagon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Marketing Icon">
+          </div>
+        </div>
+        <div class="position-text">
+          <strong>Chuyên viên Marketing Online</strong>
+          Xây dựng và triển khai các chiến dịch quảng bá khóa học trên nền tảng số.
+        </div>
+      </div>
+      <div class="position">
+        <div class="icon-container">
+          <div class="hexagon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Tư vấn Icon">
+          </div>
+        </div>
+        <div class="position-text">
+          <strong>Chuyên viên Tư vấn Khóa học</strong>
+          Giới thiệu và tư vấn khóa học phù hợp cho khách hàng, đồng hành cùng học viên trong hành trình học tập.
+        </div>
+      </div>
+      <div class="position">
+        <div class="icon-container">
+          <div class="hexagon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Designer Icon">
+          </div>
+        </div>
+        <div class="position-text">
+          <strong>Graphic Designer</strong>
+          Thiết kế hình ảnh thương hiệu, visual cho chiến dịch truyền thông của Margic.
+        </div>
+      </div>
+      <div class="position">
+        <div class="icon-container">
+          <div class="hexagon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Content Icon">
+          </div>
+        </div>
+        <div class="position-text">
+          <strong>Content Creator</strong>
+          Sáng tạo nội dung thu hút, truyền cảm hứng cho cộng đồng học viên Margic.
+        </div>
+      </div>
+      <a class="learn-more" href="#details">LEARN MORE</a>
+    </div>
+
+    <!-- Quy trình tuyển dụng -->
+    <div class="process-container">
+      <div class="process-title">Quy trình<br>tuyển dụng</div>
+      <div class="process-steps">
+        <div class="step"><div class="step-title">Ứng tuyển trực tuyến</div><div class="step-description">Điền form và gửi CV tại mục "Nộp hồ sơ".</div></div>
+        <div class="step"><div class="step-title">Sàng lọc hồ sơ</div><div class="step-description">Phòng nhân sự sẽ rà soát và chọn lọc ứng viên phù hợp.</div></div>
+        <div class="step"><div class="step-title">Phỏng vấn trực tiếp</div><div class="step-description">Chia sẻ thêm về định hướng cá nhân và văn hoá Margic.</div></div>
+        <div class="step"><div class="step-title">Thông báo kết quả</div><div class="step-description">Gửi thông báo kết quả và hỗ trợ bạn trong quá trình gia nhập.</div></div>
+      </div>
+      <a class="learn-more-process" href="#details">LEARN MORE</a>
+    </div>
+
+    <!-- Chính sách nhân sự -->
+    <div class="container policy-container">
+      <div class="title">Chính sách<br>nhân sự</div>
+      <ul>
+        <li>Môi trường làm việc năng động, sáng tạo, hỗ trợ phát triển cá nhân.</li>
+        <li>Tham gia miễn phí các khóa học tại Margic.</li>
+        <li>Được mentoring 1:1 bởi các chuyên gia đầu ngành.</li>
+        <li>Lộ trình thăng tiến rõ ràng.</li>
+        <li>Chế độ thưởng theo hiệu quả công việc.</li>
+      </ul>
+      <a class="learn-more-process" href="#details">LEARN MORE</a>
+    </div>
+
+    <!-- Cách thức ứng tuyển -->
+    <div class="apply-container">
+      <div class="apply-title">Cách thức<br>ứng tuyển</div>
+      <div class="apply-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email icon">
+        <div><b>Gửi CV và portfolio (nếu có)</b> về email: <br><b>hr@margic.vn</b></div>
+      </div>
+      <div class="apply-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="form icon">
+        <div>Hoặc điền form ứng tuyển trực tuyến <a href="#">tại đây!</a></div>
+      </div>
+      <a class="learn-more-process" href="#details">LEARN MORE</a>
+    </div>
+  </div>
+
+  <!-- PHẦN CHI TIẾT TIN TUYỂN DỤNG -->
+  <section id="details">
+    <h2><div></div>CHI TIẾT TIN TUYỂN DỤNG</h2>
+    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+      <img src="./ảnh 1.png" alt="Team Margic">
+      <img src="./ảnh 2.png" alt="Training">
+      <img src="./ảnh 3.png" alt="Trip Shanghai">
+      <img src="./ảnh 4.png" alt="hoc vien">
+    </div>
+    <h3 style="margin-top: 40px; color: #003366; font-size: 18px; font-weight: bold;">1. Yêu cầu ứng viên</h3>
+
+<h4 style="color: #003366; margin-top: 10px;"><i>Chuyên viên Marketing Online</i></h4>
+<ul>
+  <li>Có kinh nghiệm tối thiểu 6 tháng trong chạy quảng cáo Facebook/Google.</li>
+  <li>Ưu tiên ứng viên từng chạy ads cho sản phẩm giáo dục.</li>
+  <li>Biết sử dụng các công cụ tracking, đo lường hiệu quả như Google Analytics, Facebook Pixel...</li>
+  <li>Tư duy logic, phân tích dữ liệu tốt, nhanh nhạy với xu hướng thị trường.</li>
+</ul>
+
+<h4 style="color: #003366; margin-top: 15px;"><i>Chuyên viên Tư vấn Khóa học</i></h4>
+<ul>
+  <li>Giao tiếp tốt, giọng nói rõ ràng, dễ nghe.</li>
+  <li>Có kỹ năng bán hàng, thuyết phục khách hàng.</li>
+  <li>Có tinh thần hỗ trợ, kiên nhẫn, chịu được áp lực doanh số.</li>
+  <li>Ưu tiên ứng viên từng làm telesales, tư vấn dịch vụ giáo dục.</li>
+</ul>
+
+<h4 style="color: #003366; margin-top: 15px;"><i>Graphic Designer</i></h4>
+<ul>
+  <li>Thành thạo Photoshop, Illustrator (biết thêm After Effects là lợi thế).</li>
+  <li>Có tư duy thẩm mỹ, sáng tạo, bắt trend tốt.</li>
+  <li>Có khả năng làm việc nhóm, chịu được deadline.</li>
+  <li>Có portfolio (bắt buộc) đính kèm sản phẩm đã làm.</li>
+</ul>
+
+<h4 style="color: #003366; margin-top: 15px;"><i>Content Creator</i></h4>
+<ul>
+  <li>Có khả năng viết lách, kể chuyện (storytelling), ngôn ngữ trẻ trung, lôi cuốn.</li>
+  <li>Ưu tiên có kinh nghiệm sáng tạo nội dung cho nền tảng TikTok, Facebook, Instagram.</li>
+  <li>  Biết sử dụng Canva, CapCut hoặc các công cụ chỉnh sửa cơ bản.</li>
+  <li>Có óc sáng tạo, tư duy viral, yêu thích giáo dục là một điểm cộng.</li>
+</ul>
+
+<h5 style="margin-top: 40px; color: #003366; font-size: 18px; font-weight: bold;">2. Yêu cầu công việc</h5>
+<h5 style="color: #003366; margin-top: 10px;"><i>Chuyên viên Marketing Online</i></h5>
+<ul>
+  <li>Lập kế hoạch và triển khai quảng cáo theo từng khóa học cụ thể.</li>
+  <li>Viết nội dung quảng cáo, chọn visual phù hợp.</li>
+  <li>Theo dõi và tối ưu hiệu quả chiến dịch mỗi ngày.</li>
+  <li>Báo cáo và phân tích kết quả định kỳ.</li>
+</ul>
+
+<h5 style="color: #003366; margin-top: 15px;"><i>Chuyên viên Tư vấn Khóa học</i></h5>
+<ul>
+  <li>Gọi điện tư vấn cho học viên đã đăng ký quan tâm.</li>
+  <li>Chốt đơn, hướng dẫn học viên hoàn thành học phí và quy trình học.</li>
+  <li>Chăm sóc học viên trong quá trình học, tiếp nhận phản hồi.</li>
+  <li>Đóng góp cải tiến kịch bản và phương pháp tư vấn.</li>
+</ul>
+
+<h4 style="color: #003366; margin-top: 15px;"><i>Graphic Designer</i></h4>
+<ul>
+  <li>Thiết kế hình ảnh cho quảng cáo, social media, email, website…</li>
+  <li>Làm việc theo brief từ team Marketing/Content.</li>
+  <li>Đảm bảo hình ảnh đúng bộ nhận diện thương hiệu Margic.</li>
+  <li>Tham gia brainstorm cùng các chiến dịch truyền thông lớn.</li>
+</ul>
+
+<h4 style="color: #003366; margin-top: 15px;"><i>Content Creator</i></h4>
+<ul>
+  <li>Viết caption, bài viết, kịch bản video ngắn.</li>
+  <li>Tham gia cùng designer/video editor để sản xuất nội dung social.</li>
+  <li>Đề xuất ý tưởng viral theo trend phù hợp với sản phẩm.</li>
+  <li>Quản lý và duy trì nội dung trên fanpage/TikTok/Instagram.</li>
+</ul>
+
+<h6 style="margin-top: 40px; color: #003366; font-size: 18px; font-weight: bold;">3. Địa điểm làm việc</h6>
+<p>Số 90 Giải Phóng, Đồng Tâm, Hai Bà Trưng, Hà Nội</p>
+
+<h6 style="margin-top: 40px; color: #003366; font-size: 18px; font-weight: bold;">4. Cách thức ứng tuyển</h6>
+<p><b>Cách 1: Gửi Email</b></p>
+<ul>
+  <li>Gửi CV và Portfolio (bắt buộc với vị trí Designer/Content) về: <b>hr@margic.vn</b></li>
+  <li>Tiêu đề email: [Vị trí ứng tuyển] - [Họ tên]</li>
+</ul>
+<p><b>Cách 2: Điền form trực tuyến</b></p>
+<ul>
+  <li>Điền thông tin tại link ứng tuyển online</li>
+  <li>Ưu tiên hồ sơ gửi sớm - xét duyệt và phản hồi trong 3-5 ngày làm việc</li>
+</ul>
+<p><b>Hạn nộp: 1/6/2025</b></p>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>  
+</body>
+</html>

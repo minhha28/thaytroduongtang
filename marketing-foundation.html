@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marketing Foundation</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.khoahoc {
+  width: 2900px;
+  height: 100vh; /* Sử dụng chiều cao của viewport */
+  background-image: url('./mkf1.png'); 
+  background-size: cover; /* Lấp đầy không gian mà không làm méo ảnh */
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.khoahoc-text {
+  position: absolute;
+  top: 25%;
+  left: 52%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.khoahoc-text h1 {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 10px 0;
+  width: 1000px;
+  white-space: nowrap;
+}
+
+.khoahoc-text h2 {
+  font-size: 100px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 0;
+  left: 100%;
+  padding-left: 300px;
+}
+
+.khoahoc-text p {
+  font-size: 50px;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding-right: 200px; /* Hoặc 40px, tuỳ mắt bạn thấy ổn */
+  text-align: center;
+  width: 2000px;
+  margin-left: -180px;
+}
+
+.section-below {
+  width: 100%;
+  height:900px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 0; /* Gỡ bỏ padding trên và dưới */
+}
+
+.section-below img {
+  width: 100%; /* Lấp đầy chiều rộng */
+  height: 100%; /* Lấp đầy chiều cao */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+.container {
+  width: 100vw;
+  min-height: 800px;
+  box-sizing: border-box;
+  padding: 100px 60px; /* Tăng padding */
+  display: flex;
+  justify-content: center; /* Canh giữa nội dung */
+  align-items: flex-start;
+  background-color: white;
+  color: #fff;
+  border-radius: 0;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  width: 40%;
+  margin: 0 40px; /* Tăng khoảng cách giữa các phần */
+  transition: transform 0.5s ease;
+}
+
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #232a4a;
+  border: 1px solid white;
+  padding: 35px; /* Tăng padding */
+  border-radius: 20px; /* Bo tròn khung */
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+.teacher-photo {
+  width: 150px; /* Tăng kích thước ảnh giảng viên */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+.teacher-photo img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+.teacher-details {
+  font-size: 24px; /* Tăng kích thước chữ */
+  color: #ffffff;
+}
+.teacher-details p {
+  font-size: 28px; /* Tăng kích thước chữ */
+  line-height: 1.8; /* Tăng độ rộng dòng */
+  margin-top: 10px;
+  color: #f0f0f0; /* Màu sắc chữ nhẹ nhàng */
+  font-weight: 400; /* Tăng độ đậm chữ */
+}
+
+.teacher-details p span {
+  font-weight: 600; /* Làm đậm các phần quan trọng */
+  color: white; /* Màu sắc nổi bật cho các thông tin quan trọng */
+}
+
+.teacher-details p:hover {
+  color: #fff; /* Hiệu ứng đổi màu chữ khi hover */
+  background-color: rgba(0, 101, 184, 0.1); /* Tạo nền mờ khi hover */
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng mượt mà */
+}
+.badge {
+  background-color: #97c6f3;
+  color: #000;
+  padding: 12px 20px; /* Tăng kích thước */
+  border-radius: 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu */
+}
+
+.badge:hover {
+  background-color: #0065b8; /* Chuyển màu khi hover */
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  background-color: #232a4a;
+  border: 1px solid white;
+  padding: 35px;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+.schedule .text {
+  font-size: 30px; /* Tăng kích thước chữ */
+  color: #ffffff;
+}
+
+.calendar {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px; /* Tăng kích thước chữ */
+  width: 180px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+.content-section {
+  background-color: #232a4a;
+  border: 1px solid white;
+  padding: 35px;
+  border-radius: 20px;
+  font-size: 30px; /* Tăng kích thước chữ */
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+.content-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content-section ul li {
+  font-size: 30px;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #0065b8;
+  color: white;
+  border: none;
+  padding: 24px 100px; /* Tăng kích thước nút */
+  border-radius: 30px;
+  margin-left: 200px; /* Dịch sang phải */
+  margin-right: 0; /* Đảm bảo không có khoảng cách bên phải */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 40px;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004b87;
+  transform: translateY(-5px); /* Hiệu ứng di chuyển khi hover */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .left, .right {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .schedule {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+  </style>
+</head>
+<body>
+
+    <div class="khoahoc">
+        <div class="khoahoc-text">
+          <h2>Khoá học</h2>
+          <h1>MARKETING FOUNDATION</h1>
+          <p>
+            Khóa học Marketing Foundation cung cấp nền tảng vững chắc về các nguyên lý và chiến lược marketing hiện đại, giúp bạn hiểu rõ hành vi khách hàng và xây dựng kế hoạch tiếp thị hiệu quả. Đây là bước khởi đầu lý tưởng cho những ai muốn khám phá hoặc phát triển sự nghiệp trong lĩnh vực marketing. 
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="left">
+          <div class="teacher-info">
+            <div class="teacher-photo">
+              <img src="./anhgiangviennu.png" alt="Giảng viên">
+            </div>
+            <div class="teacher-details">
+              <div class="badge">GIẢNG VIÊN CHÍNH: Cô Nguyễn Thị A</div>
+              <p><span>12 năm kinh nghiệm trong ngành Marketing<br>Trưởng phòng Marketing tại công ty Con lợn con</span></p>
+            </div>
+          </div>
+      
+          <div class="schedule">
+            <div class="text">
+              <div class="badge">LỊCH HỌC</div>
+              <p><b>- Lịch học: 3 buổi/tuần (Thứ 2-4-6 hoặc Thứ 3-5-7)</b></p>
+              <p><b>- Ngày khai giảng: 30/1/2025</b></p>
+            </div>
+            <div class="calendar">
+              <strong>JANUARY</strong><br>2025
+              <div style="font-size: 12px; margin-top: 5px;">M T W T F S S<br>... <br>30 31</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="right">
+          <div class="content-section">
+            <div class="badge">NỘI DUNG</div>
+            <ul>
+              <li><b>- Giới thiệu nền tảng về SEO, Content Marketing, Email Marketing.</b></li>
+              <li><b>- 10 dự án thực hành nhóm giúp áp dụng kiến thức ngay lập tức.</b></li>
+            </ul>
+          </div>
+          <button class="btn">Đăng kí ngay để nhận ưu đãi</button>
+        </div>
+      </div>
+      
+</body>
+</html>
