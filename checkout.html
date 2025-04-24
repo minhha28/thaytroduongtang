@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Danh sách khóa học</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <!-- Thanh trên cùng -->
+  
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="../GIOITHIEU_HTML/magic-wand-and-hat-svgrepo-com.svg" alt="logo margic">
+    </div>
+    <h3 id="margic">Margic</h3>
+    <div class="search-box">
+      <input type="text" placeholder="Tìm kiếm khóa học...">
+    </div>
+    <div class="auth-buttons">
+      <button>🛒</button>
+      <button>Đăng kí</button>
+      <button>Đăng nhập</button>
+    </div>
+  </div>
+  
+  <!-- Thanh điều hướng -->
+  
+  <div class="topnav">
+      <a href="./homepage.html">Trang chủ</a>
+      <a href="./trangchu.html">Giới thiệu</a>
+      <a href="#">Khóa học</a>
+      <a href="./blogs.html">Blogs</a>
+      <a href="#">FAQ</a>
+      <a href="#">Careers Page</a>
+      <a href="#">Liên hệ</a>
+  </div>
+  
+  <div class="main-content">
+    <div class="course-list">
+      <!-- Khóa học 1 -->
+      <div class="course-item">
+        <input type="checkbox" class="checkbox" data-price="12000000" />
+        <img src="./Foundation.png" alt="Marketing Foundation">
+        <div class="course-info">
+          <h3>Marketing Foundation</h3>
+          <p>(233) ⭐⭐⭐⭐⭐</p>
+          <p>Khóa học giúp bạn xây dựng nền tảng vững chắc để bước vào thế giới tiếp thị hiện đại – nơi chiến lược, sáng tạo và dữ liệu gặp nhau.</p>
+          <p class="price">12.000.000 VNĐ</p>
+        </div>
+        <div class="course-actions">
+          <button class="tim-hieu-them">Tìm hiểu thêm</button>
+        </div>
+      </div>
+
+      <!-- Khóa học 2 -->
+      <div class="course-item">
+        <input type="checkbox" class="checkbox" data-price="22000000" />
+        <img src="./Full-Stack.png" alt="Full Stack Marketing">
+        <div class="course-info">
+          <h3>Full - Stack Marketing</h3>
+          <p>(576) ⭐⭐⭐⭐⭐</p>
+          <p>Khóa học nâng cấp tư duy chiến lược, kỹ năng toàn diện, sẵn sàng làm chủ mọi kênh và giai đoạn hành trình khách hàng.</p>
+          <p class="price">22.000.000 VNĐ</p>
+        </div>
+        <div class="course-actions">
+          <button class="tim-hieu-them">Tìm hiểu thêm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thông tin đơn hàng -->
+    <div class="cart-summary">
+      <h3>Thông tin đơn hàng</h3>
+      <p>Tạm tính: <span id="subtotal">0</span> VNĐ</p>
+      <hr />
+      <p><strong>Tổng tiền: <span id="total">0</span> VNĐ</strong></p>
+      <button class="btn-pay">THANH TOÁN</button>
+      <button class="btn-select-all" onclick="toggleSelectAll()">Chọn tất cả</button>
+    </div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const subtotal = document.getElementById('subtotal');
+    const total = document.getElementById('total');
+
+    let isAllSelected = false;
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateTotal);
+    });
+
+    function updateTotal() {
+      let sum = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          sum += parseInt(cb.dataset.price);
+        }
+      });
+      subtotal.textContent = sum.toLocaleString();
+      total.textContent = sum.toLocaleString();
+    }
+
+    function toggleSelectAll() {
+      isAllSelected = !isAllSelected;
+      checkboxes.forEach(cb => cb.checked = isAllSelected);
+      updateTotal();
+    }
+  </script>
+  
+     <!-- Footer -->
+     <footer>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <img src="../GIOITHIEU_HTML/magic-wand-and-hat-svgrepo-com.svg" alt="Margic Logo" class="logo" />
+            <div>
+              <h2>Margic - Marketing Academy</h2>
+              <ul>
+                <li>📍 Địa chỉ: Số 90 Giải Phóng, Đồng Tâm, Hai Bà Trưng, Hà Nội, Việt Nam</li>
+                <li>📞 Hotline: <a href="tel:+84870462199">+84 870 462 199</a></li>
+                <li>📧 Email: <a href="mailto:cskh@margic.com">cskh@margic.com</a></li>
+                <li>🌐 Website: <a href="https://www.margic.com/" target="_blank">https://www.margic.com/</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="footer-right">
+            <h3>Follow us on</h3>
+            <div class="social-icons">
+              <a href="#" class="icon facebook" title="Facebook"></a>
+              <a href="#" class="icon instagram" title="Instagram"></a>
+              <a href="#" class="icon zalo" title="Zalo"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </footer>
+  </body>
+  </html>
+  </body>
+  </html>
+
+</body>
+</html>
